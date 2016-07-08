@@ -1,0 +1,9 @@
+<ion-view title="文本分析" class=" " cache-view="false">
+    <ion-content padding="true" class="has-header">
+        <input type="text" style="border: solid 1px gainsboro;width: 100%" ng-model="text">
+        <input type="button" placeholder="" class="button button-assertive  button-block" ng-click="textAnalysis(text)" value="文本分析">
+        <div>关键字检索结果：<span>{{keyword}}</span></div>
+        <div>分词与词性标注结果：<span>{{participle}}</span></div>
+        <div>新闻摘要结果：<span>{{abstract}}</span></div>
+    </ion-content>
+</ion-view>

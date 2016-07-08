@@ -1,0 +1,60 @@
+.hide {
+    display: none;
+}
+.order_list {
+    width: 100%;
+}
+
+.order_list_state {
+    float: right;
+    width: 45%;
+    padding: 0;
+    font-size: 15px;
+}
+
+.show_order_info{
+    text-align: center;
+}
+
+#allmap {height: 300px;width: 100%;} #r-result {width: 100%;font-size: 14px;}
+
+#order_hour {
+    width: 45%;
+    padding: 0;
+    float: left;
+}
+
+#order_min {
+    float: right;
+    width: 45%;
+}
+
+.platform-ios .manual-ios-statusbar-padding {
+    padding-top: 20px;
+}
+
+.manual-remove-top-padding {
+    padding-top: 0px;
+}
+
+.manual-remove-top-padding .scroll {
+    padding-top: 0px !important;
+}
+
+ion-list.manual-list-fullwidth div.list, .list.card.manual-card-fullwidth {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+ion-list.manual-list-fullwidth div.list > .item, .list.card.manual-card-fullwidth > .item {
+    border-radius: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.tangram-suggestion-main {
+    z-index: 88;
+}
+.width80{
+    width: 80%;
+}

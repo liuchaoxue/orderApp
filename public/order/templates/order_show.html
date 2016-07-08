@@ -1,0 +1,23 @@
+<ion-view title="我的订单" class=" " cache-view="false">
+    <ion-content padding="true" class="has-header">
+        <div>
+            <span ng-bind="userName"></span>
+            <a ng-if="isLogin" ng-click="exit()">退出</a>
+            <a ng-if="!isLogin">登陆</a>
+        </div>
+        <div>
+            <button ng-if='!isDelverMan' ng-click="goToNewOrder()" class=" button button-balanced  button-block ">发表订单
+            </button>
+            <button ng-if="isDelverMan" ng-click="goToOrderManage()"
+                    class=" button button-balanced  button-block ">我的任务
+            </button>
+            <button ng-if="isAdmin" ng-click="goToOrderManage()"
+                    class=" button button-balanced  button-block ">管理订单
+            </button>
+        </div>
+
+
+        <div show-order order='order'></div>
+
+    </ion-content>
+</ion-view>

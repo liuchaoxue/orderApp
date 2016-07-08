@@ -1,0 +1,16 @@
+<ion-view title="订单管理" class=" " ng-controller="orderShowCtrl" cache-view="false">
+    <ion-content padding="true" class="has-header" delegate-handle="ScrollPosition">
+        <div>
+            <span ng-bind="userName"></span>
+            <a ng-if="isLogin" ng-click="exit()">退出</a>
+            <a ng-if="!isLogin">登陆</a>
+        </div>
+        <div class=" button-bar ">
+            <button ng-click="goToNewOrder()" ng-if="isAdmin" class=" button button-royal  button-block ">订单填写</button>
+            <button ng-click="goToOrderShow()" class=" button button-energized  button-block ">我的订单</button>
+        </div>
+
+        <div manage-order order='order' after-update="afterUpdate()" is-admin="isAdmin"
+             after-delete="afterDelete()"></div>
+    </ion-content>
+</ion-view>

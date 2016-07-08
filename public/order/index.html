@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script type="text/javascript"
+            src="http://api.map.baidu.com/api?v=2.0&ak=djHQsA6URIZWNyFzKmGBHbdllLIIeS6y">
+    </script>
+    <!--<script src="https://cdn1.lncld.net/static/js/av-min-1.0.0.js"></script>-->
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <!--<script src="cordova.js"></script>-->
+    <script src="lib/md5/md5.js"></script>
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <link href="css/order.css" rel="stylesheet">
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+
+    <script src="lib/javascript-state-machine/state-machine.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/routes.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/services/storage_service.js"></script>
+    <script src="js/services/jump_pag_service.js"></script>
+    <script src="js/services/lean_cloud_service.js"></script>
+    <script src="js/services/text_analysis_services.js"></script>
+
+    <script src="js/directives/number_input_directive.js"></script>
+    <script src="js/directives/time_input_directive.js"></script>
+    <script src="js/directives/address_input_directive.js"></script>
+    <script src="js/directives/order_directive.js"></script>
+
+    <script src="js/controllers/new_order_ctrl.js"></script>
+    <script src="js/controllers/order_show_ctrl.js"></script>
+    <script src="js/controllers/order_manage_ctrl.js"></script>
+    <script src="js/controllers/test_ctrl.js"></script>
+    <script src="js/controllers/nearby_ctrl.js"></script>
+    <!-- Only required for Tab projects w/ pages in multiple tabs 
+    <script src="lib/ionicuirouter/ionicUIRouter.js"></script>
+    -->
+
+</head>
+<body ng-app="app" animation="slide-left-right-ios7" ng-controller="appLoginCtrl">
+<div>
+    <div>
+        <ion-nav-bar class="bar-calm" order-freight="">
+
+            <!--<ion-nav-back-button class="button-icon icon ion-ios-arrow-back">Back</ion-nav-back-button>-->
+        </ion-nav-bar>
+
+
+        <ion-nav-view>
+
+        </ion-nav-view>
+    </div>
+</div>
+<script id="templates/appLogin.html" type="text/ng-template">
+
+    <ion-modal-view class="view-login">
+        <ion-content>
+            <form>
+                <div class="list list-inset">
+                    <label class="item item-input">
+                        <input ng-model="UserName" type="text" placeholder="用户名">
+                    </label>
+                    <label class="item item-input">
+                        <input type="password" ng-model="PassWord" placeholder="密码">
+                    </label>
+                    <button ng-click="login(UserName,PassWord)" class="button button-block button-assertive">
+                        登录
+                    </button>
+                    <div class="deliverman">
+                        <a href="" style="float: right">注册</a>
+                        <!--<a href="">快递员登录</a>-->
+                    </div>
+                </div>
+            </form>
+        </ion-content>
+    </ion-modal-view>
+</script>
+</body>
+</html>
